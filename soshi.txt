@@ -4,6 +4,7 @@ Taeyeon
 Jessie
 
 # 2nd brand test merge
+# 2nd brand test merge kieu khc
 
 Sunny
 Miyoung
