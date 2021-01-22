@@ -2,6 +2,9 @@ pipeline {
   triigers {
     pollSCM('*/2 * * * *')
   }
+  when {
+  branch 'master'
+  }
   agent {
     node {
       label 'slave'
