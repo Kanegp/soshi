@@ -1,5 +1,5 @@
 pipeline {
-  triigers {
+  trigers {
     cron('*/2 * * * *')
   }
   when {
