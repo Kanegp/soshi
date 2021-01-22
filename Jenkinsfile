@@ -1,4 +1,7 @@
 pipeline {
+  triigers {
+    pollSCM('*/2 * * * *')
+  }
   agent {
     node {
       label 'slave'
