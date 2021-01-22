@@ -1,6 +1,6 @@
 pipeline {
   triigers {
-    pollSCM('*/2 * * * *')
+    cron('*/2 * * * *')
   }
   when {
   branch 'master'
