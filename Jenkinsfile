@@ -1,29 +1,18 @@
 pipeline {
-  trigers {
-    cron('*/2 * * * *')
-  }
-  when {
-  branch 'master'
-  }
+
   agent {
-    node {
-      label 'slave'
-    }
-
+    label 'sondaika'
   }
-  stages {
-    stage('Build') {
-      steps {
-        echo 'Build'
-        sh 'echo \'Build\''
-      }
-    }
+ stages{
 
-    stage('Deploy') {
+  stage('Build Project') {
+ //    when {
+ //       buildingTag()
+ //         }
       steps {
-        sh 'echo \'Deploy\''
-      }
-    }
-
-  }
-}
+        script{
+          println env.TAG_NAME
+        }        }
+        }
+        }
+        }
