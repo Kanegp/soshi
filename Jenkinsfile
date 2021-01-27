@@ -10,7 +10,9 @@ pipeline {
  //       buildingTag()
  //         }
       steps {
-        sh '(returnStdout: true, script: "git tag --sort version:refname | tail -1").trim()'
+        sh "git tag --sort version:refname > tags.tmp"
+        sh "tail tags.tmp -n 1 > version.tmp"
+        sh "cat version.tmp"
 
        script{
           println env.TAG_NAME
